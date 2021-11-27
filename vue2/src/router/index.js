@@ -2,6 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import login from '../components/login.vue'
 import home from '../views/home.vue'
+import table from '../views/table.vue'
 Vue.use(VueRouter)
 
 const routes = [
@@ -16,6 +17,11 @@ const routes = [
   {
     path: '/home',
     component: home
+  }
+  ,
+  {
+    path: '/table',
+    component: table
   }
 ]
 
