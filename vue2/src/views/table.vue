@@ -1,10 +1,5 @@
 <template>
   <div>
-    <!-- 
-      :key="item.id" 显示第几个
-      :value="item.value" 显示的值
-      :label="item.label" 传给后台的值
-     -->
     <div
       v-for="item in lists"
       :key="item.id"
@@ -141,7 +136,7 @@ export default {
             than1.push(i + 1);
           }
         }
-        if (than1.length != 0) {
+        if (than1.length != 100) {
           alert("第" + than1 + "个时间段工作量不等于100%");
         }
       }
