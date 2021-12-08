@@ -24,19 +24,6 @@
     <Button @click="clgdata">打印数据</Button>
     <Button @click="reset">重置数据</Button>
     <Button @click="handel">处理数据</Button>
-    <div>
-      <div style="float: left">
-        <pre>
-        {{ this.lists1 }}
-      </pre
-        >
-      </div>
-      <div style="float: right">
-        <pre>
-          {{ this.lis }}
-        </pre>
-      </div>
-    </div>
   </div>
 </template>
 
@@ -44,7 +31,6 @@
 export default {
   data() {
     return {
-      lis: [],
       lists: [
         {
           id: 1,
@@ -212,6 +198,10 @@ export default {
               time: "时间段4",
               state: 1,
             },
+            {
+              time: "时间段5",
+              state: 1,
+            },
           ],
         },
         {
@@ -233,10 +223,13 @@ export default {
               time: "时间段4",
               state: 1,
             },
+            {
+              time: "时间段5",
+              state: 1,
+            },
           ],
         },
       ];
-      console.log(list, "处理之前的数据");
       let arr = [];
       for (let i = 0; i < list.length; i++) {
         arr.push({
@@ -253,28 +246,15 @@ export default {
           });
         }
       }
-      // for (let i = 0; i < list.length; i++) {
-      //   for (let j = 0; j < list[i].timeList.length; j++) {
-      //     arr[i].subtitle.push({
-      //       id: j,
-      //       show: list[i].timeList[j].state,
-      //       time: list[i].timeList[j].time,
-      //       text: 0,
-      //     });
-      //   }
-      // }
-      this.lis = arr;
       this.lists = arr;
     },
     //提交处理
     clgdata() {
-      console.log(this.lists);
       let alert1 = false;
       // 计算百分比是否超过100%
       let array1 = [];
       // 提交的数据
       let submitArray = [];
-
       for (let i = 0; i < this.lists.length; i++) {
         let subarr = [];
         let comArr = [];
@@ -295,7 +275,6 @@ export default {
         array1.push(comArr);
       }
       let array11 = this.arrayTrans(array1);
-      console.log(array11, "判断百分比");
       if (alert1 == true) {
         alert("不能有空");
       } else {
@@ -313,11 +292,9 @@ export default {
           alert("第" + than1 + "个时间段工作量不等于100%");
         }
       }
-
       console.log(submitArray);
     },
   },
 };
 </script>
-
 <style scoped lang="less"></style>
