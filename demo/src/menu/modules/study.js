@@ -9,6 +9,10 @@ export default {
         {
             path: `${pre}demo1`,
             title: 'demo1'
-        }
+      },
+      {
+        path: `${pre}echarts`,
+        title: 'echarts'
+    }
     ]
 }

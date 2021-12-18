@@ -17,7 +17,7 @@
     "axios": "^0.18.0",
     "better-scroll": "^1.12.1",
     "dayjs": "^1.8.9",
-    "echarts": "^4.1.0",
+    "echarts": "^4.9.0",
     "js-cookie": "^2.2.0",
     "lodash": "^4.17.10",
     "lowdb": "^1.0.0",

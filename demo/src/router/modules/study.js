@@ -19,6 +19,16 @@ export default {
                 closable: true
             },
             component: () => import('@/pages/study/demo1')
+      },
+      {
+        path: 'echarts',
+        name: 'echarts',
+        meta: {
+            ...meta,
+            title: 'echarts',
+            closable: true
         },
+        component: () => import('@/pages/study/echarts')
+    },
     ]
 };
